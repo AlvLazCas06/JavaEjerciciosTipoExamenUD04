@@ -11,6 +11,7 @@ public class Suite extends Habitacion {
 	private double metros;
 	private double dineroConsum;
 
+
 	public Suite(double preicoBase, boolean ocupada, String nombreCliente, int diasOcupacion, int numOcupantes,
 			double metros, double dineroConsum) {
 		super(preicoBase, ocupada, nombreCliente, diasOcupacion, numOcupantes);
@@ -42,8 +43,10 @@ public class Suite extends Habitacion {
 		return 0;
 	}
 	
-	public double calcularPrecio() {
-		return 0;
+	public double calcularPrecio(double dinLimpieza, double descuento) {
+		double cien = 100, total = 0;
+		total = super.calcularPrecio(dinLimpieza, descuento) + dineroConsum;
+		return total - (total * (descuento / cien));
 	}
 	
 }

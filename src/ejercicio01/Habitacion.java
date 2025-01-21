@@ -65,8 +65,8 @@ public class Habitacion {
 				+ ", diasOcupacion=" + diasOcupacion + ", numOcupantes=" + numOcupantes + "]";
 	}
 	
-	public double calcularPrecio() {
-		return preicoBase;
+	public double calcularPrecio(double dinLimpieza, double descuento) {
+		return preicoBase * diasOcupacion;
 	}
 
 }
