@@ -64,5 +64,9 @@ public class Habitacion {
 		return "Habitacion [preicoBase=" + preicoBase + ", ocupada=" + ocupada + ", nombreCliente=" + nombreCliente
 				+ ", diasOcupacion=" + diasOcupacion + ", numOcupantes=" + numOcupantes + "]";
 	}
+	
+	public double calcularPrecio() {
+		return preicoBase;
+	}
 
 }
