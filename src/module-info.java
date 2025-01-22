@@ -4,5 +4,5 @@
 /**
  * 
  */
-module EjerciciosExamenJava {
+module EjerciciosJavaTipoExamen {
 }
