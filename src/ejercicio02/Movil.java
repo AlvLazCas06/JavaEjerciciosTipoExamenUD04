@@ -35,9 +35,13 @@ public class Movil extends Producto {
 		return "Movil [marca=" + marca + ", modelo=" + modelo + "]";
 	}
 	
-	public double calcularPVP(double porcentaje, int cantidad) {
+	public double calcularPVP(double porcentaje, double espadaDoble,int cantidad) {
 		double cien = 100;
-		return super.calcularPVP(porcentaje, cantidad) + (super.calcularPVP(porcentaje, cantidad) * (porcentaje / cien));
+        setUnidades(getUnidades() - cantidad);
+		if (getUnidades() == 0) {
+			setVendido(true);
+		}
+		return getPrecioBase() * cantidad + ((getPrecioBase() * cantidad) * (porcentaje / cien));
 	}
 	
 }

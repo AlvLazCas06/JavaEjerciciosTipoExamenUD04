@@ -58,12 +58,6 @@ public abstract class Producto {
 		return "Producto [precioBase=" + precioBase + ", unidades=" + unidades + ", nombre=" + nombre + "]";
 	}
 
-	public double calcularPVP(double porcentaje, int cantidad) {
-		unidades -= cantidad;
-		if (unidades == 0) {
-			vendido = true;
-		}
-		return precioBase * cantidad;
-	}
+	public abstract double calcularPVP(double porcentaje, double espadaDoble, int cantidad);
 
 }

@@ -40,16 +40,16 @@ public class Ventas {
 		return total;
 	}
 
-	public double calcularVTP(double porcentaje, int cantidad) {
+	public double calcularVTP(double porcentaje, double espadaDoble, int cantidad) {
 		double total = 0;
 		for (int i = 0; i < lista.length && lista[i] != null; i++) {
-			total += lista[i].calcularPVP(porcentaje, cantidad);
+			total += lista[i].calcularPVP(porcentaje, espadaDoble, cantidad);
 		}
 		return total;
 	}
 	
-	public double devolverCambio(double pago, int prod, double porcentaje, int cantidad) {
-		return pago - lista[prod - 1].calcularPVP(porcentaje, cantidad);
+	public double devolverCambio(double pago, int prod, double porcentaje, double espadaDoble,int cantidad) {
+		return pago - lista[prod - 1].calcularPVP(porcentaje, espadaDoble, cantidad);
 	}
 	
 	public void mostrarTP() {
