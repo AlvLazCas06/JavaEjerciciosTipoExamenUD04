@@ -6,14 +6,18 @@ public class Habitacion {
 	 * o no, nombre del cliente, número de días de ocupación y número de ocupantes.
 	 */
 
-	private double preicoBase;
+	private double precioBase;
 	private boolean ocupada;
 	private String nombreCliente;
 	private int diasOcupacion;
 	private int numOcupantes;
-
-	public Habitacion(double preicoBase, boolean ocupada, String nombreCliente, int diasOcupacion, int numOcupantes) {
-		this.preicoBase = preicoBase;
+	
+	public Habitacion() {
+		
+	}
+	
+	public Habitacion(double precioBase, boolean ocupada, String nombreCliente, int diasOcupacion, int numOcupantes) {
+		this.precioBase = precioBase;
 		this.ocupada = ocupada;
 		this.nombreCliente = nombreCliente;
 		this.diasOcupacion = diasOcupacion;
@@ -21,11 +25,11 @@ public class Habitacion {
 	}
 
 	public double getPreicoBase() {
-		return preicoBase;
+		return precioBase;
 	}
 
-	public void setPreicoBase(double preicoBase) {
-		this.preicoBase = preicoBase;
+	public void setPreicoBase(double precioBase) {
+		this.precioBase = precioBase;
 	}
 
 	public boolean isOcupada() {
@@ -61,12 +65,12 @@ public class Habitacion {
 	}
 
 	public String toString() {
-		return "Habitacion [preicoBase=" + preicoBase + ", ocupada=" + ocupada + ", nombreCliente=" + nombreCliente
+		return "Habitacion [precioBase=" + precioBase + ", ocupada=" + ocupada + ", nombreCliente=" + nombreCliente
 				+ ", diasOcupacion=" + diasOcupacion + ", numOcupantes=" + numOcupantes + "]";
 	}
 	
 	public double calcularPrecio(double dinLimpieza, double descuento) {
-		return preicoBase * diasOcupacion;
+		return precioBase * diasOcupacion;
 	}
 
 }

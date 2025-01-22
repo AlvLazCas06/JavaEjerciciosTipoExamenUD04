@@ -7,10 +7,10 @@ public class Apartamento extends Habitacion {
      */
 
     private boolean limpieza;
-
-    public Apartamento(double preicoBase, boolean ocupada, String nombreCliente, int diasOcupacion, int numOcupantes,
+    
+    public Apartamento(double precioBase, boolean ocupada, String nombreCliente, int diasOcupacion, int numOcupantes,
                        boolean limpieza) {
-        super(preicoBase, ocupada, nombreCliente, diasOcupacion, numOcupantes);
+        super(precioBase, ocupada, nombreCliente, diasOcupacion, numOcupantes);
         this.limpieza = limpieza;
     }
 
